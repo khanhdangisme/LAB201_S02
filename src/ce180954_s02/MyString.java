@@ -39,28 +39,29 @@ public class MyString {
      */
     public String reverse(){
         // Split the string by spaces
-        String words[] = s.split(" "); 
+        String words[] = s.split("[ _]+"); 
         // Initialize an empty string to store the reversed result
         String reversedString = "";
         
         //Reverse the order of words
         for(int i = words.length - 1; i >= 0; i--){
             // Split the word by underscores
-            String subWords[] = words[i].split("_"); 
+//            String subWords[] = words[i].split("[ _]+"); 
             // Initialize an empty string to store the reversed result
-            String reversedSubWord = "";
+//            String reversedSubWord = "";
             
             // Reverse each sub-word and handle underscores
-            for (int j = subWords.length - 1; j >= 0; j--) {
-                 // Add the current sub-word to the reversed sub-word string
-                reversedSubWord += subWords[j];
-                if (j > 0) {
-                    // Add underscore between sub-words
-                    reversedSubWord += "_"; 
-                }
-            }
-            //Add the reversed sub-word to the final reversed string
-            reversedString += reversedSubWord;
+//            for (int j = subWords.length - 1; j >= 0; j--) {
+//                 // Add the current sub-word to the reversed sub-word string
+//                reversedSubWord += subWords[j];
+//                if (j > 0) {
+//                    // Add underscore between sub-words
+//                    reversedSubWord += "_"; 
+//                }
+//            }
+//            //Add the reversed sub-word to the final reversed string
+//            reversedString += reversedSubWord;
+            reversedString += words[i];
             if (i > 0) {
                 // Add space between words
                 reversedString += " "; 
